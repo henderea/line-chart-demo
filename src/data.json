@@ -1,0 +1,119 @@
+[
+    {
+        "description": "03/25/2019 – 03/31/2019",
+        "rawMetrics": {
+            "amrCallQualityScore": "196",
+            "amrSampleSize": "50",
+            "emeaCallQualityScore": "92",
+            "emeaSampleSize": "25"
+        }
+    },
+    {
+        "description": "03/18/2019 – 03/24/2019",
+        "rawMetrics": {
+            "amrCallQualityScore": "194",
+            "amrSampleSize": "51",
+            "emeaCallQualityScore": "91",
+            "emeaSampleSize": "24"
+        }
+    },
+    {
+        "description": "03/11/2019 – 03/17/2019",
+        "rawMetrics": {
+            "amrCallQualityScore": "192",
+            "amrSampleSize": "51",
+            "emeaCallQualityScore": "89",
+            "emeaSampleSize": "24"
+        }
+    },
+    {
+        "description": "03/04/2019 – 03/10/2019",
+        "rawMetrics": {
+            "amrCallQualityScore": "190",
+            "amrSampleSize": "51",
+            "emeaCallQualityScore": "89",
+            "emeaSampleSize": "24"
+        }
+    },
+    {
+        "description": "02/25/2019 – 03/03/2019",
+        "rawMetrics": {
+            "amrCallQualityScore": "184",
+            "amrSampleSize": "51",
+            "emeaCallQualityScore": "90",
+            "emeaSampleSize": "24"
+        }
+    },
+    {
+        "description": "02/18/2019 – 02/24/2019",
+        "rawMetrics": {
+            "amrCallQualityScore": "173",
+            "amrSampleSize": "51",
+            "emeaCallQualityScore": "88",
+            "emeaSampleSize": "24"
+        }
+    },
+    {
+        "description": "02/11/2019 – 02/17/2019",
+        "rawMetrics": {
+            "amrCallQualityScore": "188",
+            "amrSampleSize": "50",
+            "emeaCallQualityScore": "89",
+            "emeaSampleSize": "25"
+        }
+    },
+    {
+        "description": "02/04/2019 – 02/10/2019",
+        "rawMetrics": {
+            "amrCallQualityScore": "192",
+            "amrSampleSize": "51",
+            "emeaCallQualityScore": "93",
+            "emeaSampleSize": "24"
+        }
+    },
+    {
+        "description": "01/28/2019 – 02/03/2019",
+        "rawMetrics": {
+            "amrCallQualityScore": "185",
+            "amrSampleSize": "51",
+            "emeaCallQualityScore": "86",
+            "emeaSampleSize": "24"
+        }
+    },
+    {
+        "description": "01/21/2019 – 01/27/2019",
+        "rawMetrics": {
+            "amrCallQualityScore": "190",
+            "amrSampleSize": "51",
+            "emeaCallQualityScore": "89",
+            "emeaSampleSize": "24"
+        }
+    },
+    {
+        "description": "01/14/2019 – 01/20/2019",
+        "rawMetrics": {
+            "amrCallQualityScore": "187",
+            "amrSampleSize": "50",
+            "emeaCallQualityScore": "95",
+            "emeaSampleSize": "25"
+        }
+    },
+    {
+        "description": "01/07/2019 – 01/13/2019",
+        "rawMetrics": {
+            "amrCallQualityScore": "180",
+            "amrSampleSize": "51",
+            "emeaCallQualityScore": "87",
+            "emeaSampleSize": "24"
+        }
+    },
+    {
+        "description": "12/31/2018 – 01/06/2019",
+        "rawMetrics": {
+            "amrCallQualityScore": "185",
+            "amrSampleSize": "50",
+            "emeaCallQualityScore": "90",
+            "emeaSampleSize": "25"
+        }
+    }
+]

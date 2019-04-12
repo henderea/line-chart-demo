@@ -1,0 +1,79 @@
+.axis {
+  path, line {
+    stroke-width: 0;
+  }
+  
+  .tick {
+    font-family: 'Lato', sans-serif;
+    font-size:   11px;
+    font-weight: 400;
+  }
+  &.x {
+    .tick {
+      text {
+        transform: translate(-10px, 20px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+.d3-tip {
+  line-height:      1em;
+  font-weight:      400;
+  font-family:      'Lato', sans-serif;
+  font-size:        14px;
+  padding:          14px;
+  background-color: #383838;
+  color:            #fff;
+  white-space:      nowrap;
+  border-radius:    6pt;
+  text-align:       center;
+  z-index:          721;
+  box-shadow:       0 1px 5pt rgba(0, 0, 0, 0.5);
+  
+  p {
+    line-height: 1em;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    font-size:   14px;
+    padding:     5px 0;
+    margin:      0;
+    color:       #fff;
+    white-space: nowrap;
+    text-align:  center;
+  }
+  
+  &.n:after {
+    box-sizing:       border-box;
+    display:          inline-block;
+    width:            20px;
+    height:           20px;
+    background-color: #383838;
+    content:          "";
+    position:         absolute;
+    bottom:           -10px;
+    left:             50%;
+    margin-left:      -10px;
+    z-index:          721;
+    transform:        rotate(45deg);
+    clip-path:        polygon(100% 0%, 0% 100%, 100% 100%);
+    box-shadow:       0 1px 5pt rgba(0, 0, 0, 0.5);
+  }
+  
+  &.s:before {
+    box-sizing:       border-box;
+    display:          inline-block;
+    width:            20px;
+    height:           20px;
+    background-color: #383838;
+    content:          "";
+    position:         absolute;
+    top:              -10px;
+    left:             50%;
+    margin-left:      -10px;
+    z-index:          721;
+    transform:        rotate(-135deg);
+    clip-path:        polygon(100% 0%, 0% 100%, 100% 100%);
+    box-shadow:       0 1px 5pt rgba(0, 0, 0, 0.5);
+  }
+}
