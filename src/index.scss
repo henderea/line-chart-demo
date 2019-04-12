@@ -41,6 +41,12 @@
     color:       #fff;
     white-space: nowrap;
     text-align:  center;
+    &.big {
+      font-size: 21px;
+      b {
+        font-weight: 700;
+      }
+    }
   }
   
   &.n:after {

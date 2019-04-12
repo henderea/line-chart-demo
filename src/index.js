@@ -51,13 +51,14 @@ class ChartSizing {
 }
 
 function draw(data, field, sizes) {
+    $('.d3-tip').remove();
     const svg = d3.create('svg')
         .attr('width', sizes.fullWidth)
         .attr('height', sizes.fullHeight);
     var tip = d3Tip()
         .attr('class', 'd3-tip')
         .offset([-20, 0])
-        .html(d => `${d.description}: ${d[field]}`);
+        .html(d => `<p class="big">Score: <b>${d[field]}</b></p><p>${d.description}</p>`);
     var g = svg.append('g')
         .attr('transform', `translate(${sizes.left},${sizes.top})`);
     g.call(tip);
@@ -80,22 +81,22 @@ function draw(data, field, sizes) {
         .call(d3.axisLeft(y).tickFormat(d3.format('.2f')).ticks(fullRange ? 10 : 8));
 
     g.selectAll('.y-line')
-    .data(_.range(fullRange ? 1.5 : 2.5, 5.5, 0.5))
-    .enter().append('line')
-    .attr('x1', 0)
-    .attr('x2', sizes.width)
-    .attr('y1', d => y(d))
-    .attr('y2', d => y(d))
-    .attr('stroke', '#b8b8b8')
-    .attr('stroke-width', 1);
+        .data(_.range(fullRange ? 1.5 : 2.5, 5.5, 0.5))
+        .enter().append('line')
+        .attr('x1', 0)
+        .attr('x2', sizes.width)
+        .attr('y1', d => y(d))
+        .attr('y2', d => y(d))
+        .attr('stroke', '#b8b8b8')
+        .attr('stroke-width', 1);
 
     g.append('line')
-    .attr('x1', 0)
-    .attr('x2', sizes.width)
-    .attr('y1', y(fullRange ? 1 : 2))
-    .attr('y2', y(fullRange ? 1 : 2))
-    .attr('stroke', '#000000')
-    .attr('stroke-width', 1);
+        .attr('x1', 0)
+        .attr('x2', sizes.width)
+        .attr('y1', y(fullRange ? 1 : 2))
+        .attr('y2', y(fullRange ? 1 : 2))
+        .attr('stroke', '#000000')
+        .attr('stroke-width', 1);
 
     var line = d3.line()
         .defined(d => !_.isNaN(d[field]))
@@ -110,7 +111,7 @@ function draw(data, field, sizes) {
         .datum(data)
         .attr('fill', 'none')
         .attr('stroke', '#7cc5ec')
-        .attr('stroke-width', 4)
+        .attr('stroke-width', 6)
         .attr('stroke-linejoin', 'round')
         .attr('stroke-linecap', 'round')
         .attr('d', line);
@@ -121,15 +122,17 @@ function draw(data, field, sizes) {
         .attr('transform', d => `translate(${x(d.date)}, ${y(d[field])})`)
         .on('mouseover', tip.show)
         .on('mouseout', tip.hide)
-        .attr('r', 10)
+        .attr('r', 9)
         .attr('fill', '#ffffff')
         .attr('stroke', '#1dafec')
-        .attr('stroke-width', 10);
+        .attr('stroke-width', 8);
 
-    d3.select('body').append(() => svg.node());
+    d3.select('#chartDiv').append(() => svg.node());
 }
 
 $(function() {
     const sizes = new ChartSizing(1000);
-    draw(data, 'overall', sizes);
+    let mode = location.search.replace(/^.*mode=(\w+)$/, '$1').toLowerCase();
+    if(!_.includes(['overall', 'amr', 'emea'], mode)) { mode = 'overall'; }
+    draw(data, mode, sizes);
 });
