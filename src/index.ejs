@@ -1,0 +1,15 @@
+<%
+    const packageJson = require('../package.json')
+    title = (packageJson.htmlMeta && packageJson.htmlMeta.title) || packageJson.name
+    description = (packageJson.htmlMeta && packageJson.htmlMeta.description) || packageJson.description
+ %>
+<html>
+    <head>
+        <title><%= title %></title>
+        <meta property="og:title" content="<%= title %>"/>
+        <meta property="og:description" content="<%= description %>"/>
+    </head>
+    <body>
+        <div id="chartDiv"></div>
+    </body>
+</html>
