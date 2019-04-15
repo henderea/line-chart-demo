@@ -35,6 +35,7 @@
     "lodash": "^4.17.11"
   },
   "htmlMeta": {
+    "type": "",
     "title": "Line chart demo",
     "description": "A demo of a line chart for APL-7637",
     "siteName": "JS Demos - henderea.com"
