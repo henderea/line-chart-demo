@@ -12,6 +12,7 @@
     "now-build": "static-site-builder build",
     "watch": "static-site-builder watch",
     "clean": "rm -rf dist build",
+    "stage": "now --target staging",
     "deploy": "now --target production && now rm line-chart-demo --safe --yes"
   },
   "author": "henderea",
@@ -35,6 +36,7 @@
   },
   "htmlMeta": {
     "title": "Line chart demo",
-    "description": "A demo of a line chart for APL-7637"
+    "description": "A demo of a line chart for APL-7637",
+    "siteName": "JS Demos - henderea.com"
   }
 }

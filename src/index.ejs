@@ -1,13 +1,19 @@
 <%
     const packageJson = require('../package.json')
-    title = (packageJson.htmlMeta && packageJson.htmlMeta.title) || packageJson.name
-    description = (packageJson.htmlMeta && packageJson.htmlMeta.description) || packageJson.description
+    const title = (packageJson.htmlMeta && packageJson.htmlMeta.title) || packageJson.name
+    const description = (packageJson.htmlMeta && packageJson.htmlMeta.description) || packageJson.description
+    const type = (packageJson.htmlMeta && packageJson.htmlMeta.type) || 'website'
+    const siteName = (packageJson.htmlMeta && packageJson.htmlMeta.siteName) || null
  %>
 <html>
     <head>
         <title><%= title %></title>
+        <meta property="og:type" content="<%= type %>"/>
         <meta property="og:title" content="<%= title %>"/>
         <meta property="og:description" content="<%= description %>"/>
+        <% if(siteName) { %>
+        <meta property="og:site_name" content="<%= siteName %>"/>
+        <% } %>
     </head>
     <body>
         <div id="chartDiv"></div>
