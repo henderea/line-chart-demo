@@ -19,7 +19,7 @@
   "license": "ISC",
   "repository": "git@github.com:henderea/line-chart-demo.git",
   "devDependencies": {
-    "@henderea/static-site-builder": "^1.2.16",
+    "@henderea/static-site-builder": "^1.2.17",
     "chalk": "^2.4.2",
     "concurrently": "^4.1.0",
     "diff": "^4.0.1",
